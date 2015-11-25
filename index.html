@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+   <img id='pic1' src="http://mirgif.com/KARTINKI/kosmos/kosmos-81.jpg" />
+   <img id='pic2' src="http://www.sunhome.ru/UsersGallery/Cards/prazdnik_den_zemli_kartinka.jpg" />
+
+   <script type="text/javascript">
+   	function resize(delem, relem){
+   		$(delem).css({
+   			"width":"", 
+   			"height":""
+   		}, 5000);
+   		el = $(relem);
+   		el.animate({
+   			"height": el.height()*2,
+   	 		"width": el.width()*2
+   		}, 5000);
+   	}
+
+   	$('#pic1').click(function (){resize(this, '#pic2')});
+   	$('#pic2').click(function (){resize(this, '#pic1')});
+
+   </script>
+</body>
+</html>
